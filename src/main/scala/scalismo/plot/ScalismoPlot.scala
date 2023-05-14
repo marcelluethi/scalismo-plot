@@ -16,17 +16,18 @@
  */
 package scalismo.plot
 
-import scalismo.plot.Chart
 import scalismo.plot.data.DataFrame
 import scalismo.plot.data.DataFrame.*
 
-import scalismo.plot.Channel
-import scalismo.plot.Scale
-import scalismo.plot.ChartWithViews
-import scalismo.plot.CompleteChart
-import scalismo.plot.Axis
-import scalismo.plot.vegalite.VegaChart
-import scalismo.plot.Data.ColumnData
+import scaltair.Data.ColumnData
+import scaltair.Chart
+import scaltair.Channel
+import scaltair.FieldType
+import scaltair.ChartProperties
+import scaltair.Scale
+import scaltair.vegalite.VegaChart
+import scaltair.CompleteChart
+
 
 /** The high-level API for creating plots. The data is represented as a
   * DataFrame and passed when constructing the class. The data for the

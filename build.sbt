@@ -31,22 +31,10 @@ lazy val root = (project in file("."))
     javacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) match {
       case _ => Seq("-source", "1.8", "-target", "1.8")
     }),
+    libraryDependencies += "ch.unibas.cs.gravis" %% "scaltair" % "0.1-SNAPSHOT",
     libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
     mdocIn := new java.io.File("docs/mdoc"),
-    mdocOut := new java.io.File("docs/"), 
-    libraryDependencies += ("sh.almond" % "scala-kernel-api" % "0.13.0" % Provided)
-        .cross(CrossVersion.for3Use2_13With("", ".7"))
-        .exclude("com.lihaoyi", "geny_2.13")
-        .exclude("com.lihaoyi", "sourcecode_2.13")
-        .exclude("com.lihaoyi", "fansi_2.13")
-        .exclude("com.lihaoyi", "os-lib_2.13")
-        .exclude("com.lihaoyi", "pprint_2.13")
-        .exclude("org.scala-lang.modules", "scala-collection-compat_2.13")
-        .exclude("com.github.jupyter", "jvm-repr"),
-
-
-
-
+    mdocOut := new java.io.File("docs/")
   )
 
   .enablePlugins(MdocPlugin)
